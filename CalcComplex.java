@@ -7,14 +7,7 @@ public class CalcComplex extends Complex{
         super(dReal, dImaginary);
     }
 
-    // Конвертация комплексного числа
-
-    public String toString() {
-        if (dImaginary >= 0)
-            return dReal + "+" +  dImaginary + "i";
-        else
-            return dReal + "-" + -dImaginary + "i";
-    }
+    
 
 
     // ================================================================  
@@ -22,8 +15,8 @@ public class CalcComplex extends Complex{
 
 
     // cA + cB
-    public Complex Add(Complex cB ) {
-        Complex sum = new Complex();
+    public CalcComplex Add(CalcComplex cB ) {
+        CalcComplex sum = new CalcComplex();
 
         sum.dReal      = dReal      + cB.dReal;
         sum.dImaginary = dImaginary + cB.dImaginary;
@@ -33,8 +26,8 @@ public class CalcComplex extends Complex{
 
     // cA * cB
 
-    public Complex Mult( Complex cB ) {
-        Complex multi = new Complex();
+    public CalcComplex Mult( CalcComplex cB ) {
+        CalcComplex multi = new CalcComplex();
 
         multi.dReal      = dReal*cB.dReal      - dImaginary*cB.dImaginary;
         multi.dImaginary = dImaginary*cB.dReal + dReal*cB.dImaginary;
@@ -43,8 +36,8 @@ public class CalcComplex extends Complex{
     }
 
     // cA - cB
-    public Complex Sub( Complex cB ) {
-        Complex subs = new Complex();
+    public CalcComplex Sub( CalcComplex cB ) {
+        CalcComplex subs = new CalcComplex();
 
         subs.dReal      = dReal      - cB.dReal;
         subs.dImaginary = dImaginary - cB.dImaginary;
@@ -56,8 +49,8 @@ public class CalcComplex extends Complex{
 
     // cA / cB
 
-    public Complex Div( Complex cB ) {
-        Complex div = new Complex();
+    public CalcComplex Div( CalcComplex cB ) {
+        CalcComplex div = new CalcComplex();
         double dR, dDen;
 
         if(Math.abs( cB.dReal ) >= Math.abs( cB.dImaginary )) {
