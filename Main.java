@@ -1,10 +1,15 @@
 public class Main {
     public static void main (String args[]) {
-
+        
         // Ввод и вывод в консоль двух комплексных чисел
 
-        CalcComplex cA = new CalcComplex( 1.0, 2.0 );
-        CalcComplex cB = new CalcComplex( 3.0, 4.0 );
+        // CalcComplex cA = new CalcComplex( 1.0, 2.0 );
+        // CalcComplex cB = new CalcComplex( 3.0, 4.0 );
+        Input input = new Input();
+        CalcComplex cA = input.getA();
+        CalcComplex cB = input.getB();
+        View view = new View();
+        view.SoutNums();
 
         System.out.println("cA = " + cA.toString() );
         System.out.println("cB = " + cB.toString() );
