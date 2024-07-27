@@ -8,11 +8,15 @@ public class Main {
         Input input = new Input();
         CalcComplex cA = input.getA();
         CalcComplex cB = input.getB();
+
         View view = new View();
         view.SoutNums();
 
-        System.out.println("cA = " + cA.toString() );
-        System.out.println("cB = " + cB.toString() );
+        Service service = new Service();
+        service.Calculate("+");
+
+        // System.out.println("cA = " + cA.toString() );
+        // System.out.println("cB = " + cB.toString() );
 
         // Вывод операций
 

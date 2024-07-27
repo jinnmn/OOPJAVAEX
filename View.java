@@ -6,7 +6,9 @@ public class View {
     public void SoutNums() {
         System.out.println("cA = " + cA.toString());
         System.out.println("cB = " + cB.toString());
-
     }
     
+    public void SoutString(char x , String res) {
+
+    }
 }
