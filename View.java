@@ -3,13 +3,15 @@ public class View {
     CalcComplex cA = input.getA();
     CalcComplex cB = input.getB();
 
-    public void SoutNums() {
-        System.out.println("cA = " + cA.toString());
-        System.out.println("cB = " + cB.toString());
+    public View() {
+    }
+
+    public void soutNums(String res) {
+        System.out.print(res);
     }
     
-    public void SoutConsole(String res) {
-        System.out.println(res);
+    public void soutC(String res) {
+        System.out.print(res);
     }
 
 

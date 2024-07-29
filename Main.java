@@ -8,12 +8,15 @@ public class Main {
         // Input input = new Input();
         // CalcComplex cA = input.getA();
         // CalcComplex cB = input.getB();
+        
+        Service service = new Service();
 
         View view = new View();
-        view.SoutNums();
+        view.soutNums(service.soutNumStringBuild());
    
 
-        Service service = new Service();
+        Logger logger = new Logger();
+        logger.soutC(service.soutStringBuild("+"));
         
 
         // System.out.println("cA = " + cA.toString() );
@@ -22,7 +25,7 @@ public class Main {
         // Вывод операций
 
         // CalcComplex cAdd = cA.Add(cB);
-        view.SoutConsole(service.soutStringBuild("+"));
+        view.soutC(service.soutStringBuild("+"));
         // CalcComplex cSub = cA.Sub(cB);
         // System.out.println("Complex   cA - cB = " + cSub.toString() );
         // CalcComplex cDiv = cA.Mult(cB);

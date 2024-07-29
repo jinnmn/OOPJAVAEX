@@ -1,4 +1,4 @@
-public class Complex {
+public abstract class Complex {
     double dReal, dImaginary;
 
     public Complex() {}

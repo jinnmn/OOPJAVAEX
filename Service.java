@@ -2,7 +2,7 @@ public class Service {
         private Input input = new Input();
         private CalcComplex cA = input.getA();
         private CalcComplex cB = input.getB();
-
+        
         // CalcComplex cAdd = cA.Add(cB);
         // System.out.println("Complex   cA + cB = " + cAdd.toString() );
         // CalcComplex cSub = cA.Sub(cB);
@@ -12,7 +12,7 @@ public class Service {
         // CalcComplex cMult = cA.Div(cB);
         // System.out.println("Complex   cA / cB = " + cMult.toString() );
 
-        public CalcComplex calculate(String x) {
+        private CalcComplex calculate(String x) {
             switch (x) {
                 case "+":
                     return cA.Add(cB);
@@ -22,15 +22,26 @@ public class Service {
                     return cA.Mult(cB);
                 case "/":                    
                      return cA.Div(cB);
-          
-                
-            }
-            return cA;
+                          
+            } 
+            return cA; ///////!
 
         }
         public String soutStringBuild(String x ) {
-            return String.format(
-                "Complex   cA %s cB = %s", x, calculate(x));
+            return String
+            .format("Complex   cA %s cB = %s\n"
+            , x, calculate(x));
+        }
+
+        public String soutNumStringBuild() {
+            String res = new String();
+            
+            for (CalcComplex c : input.getNums() ) {
+                res = res 
+                + String.format("cA = %s", c) 
+                + "\n";
+            }
+            return res;
         }
         
 }
