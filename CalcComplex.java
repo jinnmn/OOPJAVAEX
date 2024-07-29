@@ -6,12 +6,8 @@ public class CalcComplex extends Complex{
     public CalcComplex(double dReal, double dImaginary) {
         super(dReal, dImaginary);
     }
+  
 
-    
-
-
-    // ================================================================  
-    // Операции над комплексными числами
 
 
     // cA + cB

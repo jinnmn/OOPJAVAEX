@@ -1,17 +1,16 @@
 public class Service {
-        private Input input = new Input();
+        Input input = new Input();
         private CalcComplex cA = input.getA();
         private CalcComplex cB = input.getB();
+        public final String[] symbolls = new String[] {       
+            "+",
+            "-",
+            "*",
+            "/"
+        };
+        View view = new View();
+        Logger logger = new Logger();  
         
-        // CalcComplex cAdd = cA.Add(cB);
-        // System.out.println("Complex   cA + cB = " + cAdd.toString() );
-        // CalcComplex cSub = cA.Sub(cB);
-        // System.out.println("Complex   cA - cB = " + cSub.toString() );
-        // CalcComplex cDiv = cA.Mult(cB);
-        // System.out.println("Complex   cA * cB = " + cDiv.toString() );
-        // CalcComplex cMult = cA.Div(cB);
-        // System.out.println("Complex   cA / cB = " + cMult.toString() );
-
         private CalcComplex calculate(String x) {
             switch (x) {
                 case "+":
@@ -43,5 +42,21 @@ public class Service {
             }
             return res;
         }
+
+        public void printConsole() {
+            view.soutNums(soutNumStringBuild());
+            for (String x : symbolls) {
+                view.soutC(soutStringBuild(x)); 
+            }
+            
+        }
+
+        public void printLogs() {
+            logger.soutC(soutNumStringBuild());
+            for (String x : symbolls) {
+                logger.soutC(soutStringBuild(x));
+            }
+        }
         
 }
+

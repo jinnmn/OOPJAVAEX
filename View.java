@@ -1,8 +1,5 @@
 public class View {
-    Input input = new Input();
-    CalcComplex cA = input.getA();
-    CalcComplex cB = input.getB();
-
+       
     public View() {
     }
 

@@ -3,6 +3,7 @@ public class Input {
     public final CalcComplex cB = new CalcComplex( 3.0, 4.0 );
     public final CalcComplex[] nums = new CalcComplex[] {cA,cB};
     
+
     public CalcComplex getA() {
         return cA;
     }
@@ -14,5 +15,11 @@ public class Input {
     public CalcComplex[] getNums() {
         return nums;
     }
+
+    
+
+   
 }
  
+
+
