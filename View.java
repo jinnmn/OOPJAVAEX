@@ -8,7 +8,10 @@ public class View {
         System.out.println("cB = " + cB.toString());
     }
     
-    public void SoutString(char x , String res) {
-
+    public void SoutConsole(String res) {
+        System.out.println(res);
     }
+
+
+    
 }
