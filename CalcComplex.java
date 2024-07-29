@@ -1,14 +1,11 @@
-public class CalcComplex extends Complex{
+public class CalcComplex extends Complex {
 
     public CalcComplex() {
     }
 
-    public CalcComplex(double dReal, double dImaginary) {
+    public CalcComplex(double dReal, double dImaginary){
         super(dReal, dImaginary);
     }
-  
-
-
 
     // cA + cB
     public CalcComplex Add(CalcComplex cB ) {
@@ -21,7 +18,6 @@ public class CalcComplex extends Complex{
     }
 
     // cA * cB
-
     public CalcComplex Mult( CalcComplex cB ) {
         CalcComplex multi = new CalcComplex();
 
@@ -41,10 +37,7 @@ public class CalcComplex extends Complex{
         return (subs);
     }
 
-
-
     // cA / cB
-
     public CalcComplex Div( CalcComplex cB ) {
         CalcComplex div = new CalcComplex();
         double dR, dDen;

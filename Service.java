@@ -21,23 +21,24 @@ public class Service {
                     return cA.Mult(cB);
                 case "/":                    
                      return cA.Div(cB);
-                          
+                default:
+                    throw new IllegalArgumentException("Seriously?!");       
             } 
-            return cA; ///////!
+            
 
         }
-        public String soutStringBuild(String x ) {
+        private String soutStringBuild(String x ) {
             return String
             .format("Complex   cA %s cB = %s\n"
             , x, calculate(x));
         }
 
-        public String soutNumStringBuild() {
+        private String soutNumStringBuild() {
             String res = new String();
             
             for (CalcComplex c : input.getNums() ) {
-                res = res 
-                + String.format("cA = %s", c) 
+                res = res + String
+                .format("cA = %s", c) 
                 + "\n";
             }
             return res;

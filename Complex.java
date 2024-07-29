@@ -10,9 +10,11 @@ public abstract class Complex {
 
     public String toString() {
         if (dImaginary >= 0)
-            return dReal + "+" +  dImaginary + "i";
+            return String.format("%.2f",dReal) + "+" 
+            +  String.format("%.2f",dImaginary) + "i";
         else
-            return dReal + "-" + -dImaginary + "i";
+            return String.format("%.2f",dReal) + "-" 
+            + String.format("%.2f",-dImaginary) + "i";
     }
 
     
